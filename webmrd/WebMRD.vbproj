@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA286E29-804F-434B-80E0-AE2129411D5F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebMRD</RootNamespace>
+    <AssemblyName>WebMRD</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebMRD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebMRD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer, Version=3.1.5.463, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.0.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\WebMRD.dll" />
+    <Content Include="bin\WebMRD.pdb" />
+    <Content Include="bin\WebMRD.xml" />
+    <Content Include="adminFotos.aspx" />
+    <Content Include="images\ie913x13.png" />
+    <Content Include="login.aspx" />
+    <Content Include="housesintimages\larger\A2.JPG" />
+    <Content Include="housesintimages\larger\A3.JPG" />
+    <Content Include="housesintimages\larger\A8.JPG" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\interestinglinksfavicons\1.ico" />
+    <Content Include="images\interestinglinksfavicons\2.ico" />
+    <Content Include="images\menu\menu_r1_c1.gif" />
+    <Content Include="images\menu\menu_r1_c1.png" />
+    <Content Include="images\menu\menu_r1_c2.gif" />
+    <Content Include="images\menu\menu_r1_c2.png" />
+    <Content Include="images\menu\menu_r1_c3.gif" />
+    <Content Include="images\menu\menu_r1_c3.png" />
+    <Content Include="images\menu\menu_r2_c1.gif" />
+    <Content Include="images\menu\menu_r2_c1.png" />
+    <Content Include="images\menu\menu_r2_c2.gif" />
+    <Content Include="images\menu\menu_r2_c2.png" />
+    <Content Include="images\menu\menu_r2_c3.gif" />
+    <Content Include="images\menu\menu_r2_c3.png" />
+    <Content Include="images\menu\menu_r3_c1.gif" />
+    <Content Include="images\menu\menu_r3_c1.png" />
+    <Content Include="images\menu\menu_r3_c2.gif" />
+    <Content Include="images\menu\menu_r3_c2.png" />
+    <Content Include="images\menu\menu_r3_c3.gif" />
+    <Content Include="images\menu\menu_r3_c3.png" />
+    <Content Include="images\menu\spacer.gif" />
+    <Content Include="images\outdated\bg.png" />
+    <Content Include="images\outdated\bgmenu.jpg" />
+    <Content Include="images\outdated\contentholderbg.png" />
+    <Content Include="images\outdated\contentholderloggedbg.png" />
+    <Content Include="images\outdated\creditandaslogo.png" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
+    <Content Include="indexgallery.aspx" />
+    <Content Include="aserradero.aspx" />
+    <Content Include="aserraderogallery.aspx" />
+    <Content Include="housesextimages\smaller\A1.jpg" />
+    <Content Include="housesextimages\smaller\A2.JPG" />
+    <Content Include="housesextimages\smaller\A3.jpg" />
+    <Content Include="housesextimages\smaller\A4.JPG" />
+    <Content Include="housesextimages\smaller\A5.JPG" />
+    <Content Include="housesextimages\smaller\A6.jpg" />
+    <Content Include="housesextimages\smaller\A7.jpg" />
+    <Content Include="housesextimages\smaller\A8.jpg" />
+    <Content Include="housesextimages\smaller\A9.jpg" />
+    <Content Include="housesextimages\smaller\B1.jpg" />
+    <Content Include="housesextimages\smaller\B2.jpg" />
+    <Content Include="housesextimages\smaller\B3.jpg" />
+    <Content Include="housesextimages\smaller\B4.jpg" />
+    <Content Include="housesextimages\smaller\B5.jpg" />
+    <Content Include="housesextimages\smaller\B6.jpg" />
+    <Content Include="housesextimages\smaller\B7.JPG" />
+    <Content Include="housesextimages\smaller\B8.jpg" />
+    <Content Include="housesextimages\smaller\B9.jpg" />
+    <Content Include="housesextimages\smaller\C1.JPG" />
+    <Content Include="housesextimages\smaller\C2.JPG" />
+    <Content Include="housesextimages\smaller\C3.jpg" />
+    <Content Include="housesextimages\smaller\C4.jpg" />
+    <Content Include="housesextimages\smaller\C5.jpg" />
+    <Content Include="housesextimages\smaller\C6.jpg" />
+    <Content Include="housesextimages\smaller\C7.JPG" />
+    <Content Include="housesextimages\smaller\C8.JPG" />
+    <Content Include="housesextimages\smaller\C9.JPG" />
+    <Content Include="housesextimages\smaller\D1.JPG" />
+    <Content Include="housesextimages\smaller\D2.jpg" />
+    <Content Include="housesextimages\smaller\D3.jpg" />
+    <Content Include="housesextimages\smaller\D4.JPG" />
+    <Content Include="housesextimages\smaller\D5.JPG" />
+    <Content Include="housesextimages\smaller\D6.jpg" />
+    <Content Include="housesextimages\smaller\D7.JPG" />
+    <Content Include="housesextimages\smaller\D8.jpg" />
+    <Content Include="housesextimages\smaller\D9.JPG" />
+    <Content Include="housesextimages\smaller\E1.jpg" />
+    <Content Include="housesextimages\smaller\E2.JPG" />
+    <Content Include="housesextimages\smaller\E3.JPG" />
+    <Content Include="housesextimages\smaller\E4.JPG" />
+    <Content Include="housesextimages\smaller\E5.JPG" />
+    <Content Include="housesextimages\smaller\E6.jpg" />
+    <Content Include="housesextimages\smaller\E7.jpg" />
+    <Content Include="housesextimages\smaller\E8.jpg" />
+    <Content Include="housesextimages\smaller\E9.jpg" />
+    <Content Include="housesextimages\smaller\F1.jpg" />
+    <Content Include="housesintimages\smaller\A1.jpg" />
+    <Content Include="housesintimages\smaller\A2.jpg" />
+    <Content Include="housesintimages\smaller\A3.jpg" />
+    <Content Include="housesintimages\smaller\A4.jpg" />
+    <Content Include="housesintimages\smaller\A5.jpg" />
+    <Content Include="housesintimages\smaller\A6.jpg" />
+    <Content Include="housesintimages\smaller\A7.jpg" />
+    <Content Include="housesintimages\smaller\A8.jpg" />
+    <Content Include="housesintimages\smaller\A9.JPG" />
+    <Content Include="housesintimages\smaller\B1.JPG" />
+    <Content Include="housesintimages\smaller\B2.jpg" />
+    <Content Include="images\web_08_complete_en.jpg" />
+    <Content Include="images\web_09_en.jpg" />
+    <Content Include="images\web_09_es.jpg" />
+    <Content Include="images\web_15.png" />
+    <Content Include="images\web_15_en.png" />
+    <Content Include="inversionistas.aspx" />
+    <Content Include="officesimages\A1.JPG" />
+    <Content Include="officesimages\A2.JPG" />
+    <Content Include="officesimages\larger\A1.JPG" />
+    <Content Include="officesimages\larger\A2.JPG" />
+    <Content Include="officesimages\smaller\A1.JPG" />
+    <Content Include="officesimages\smaller\A2.JPG" />
+    <Content Include="othersimages\B2.JPG" />
+    <Content Include="othersimages\B3.jpg" />
+    <Content Include="othersimages\B4.JPG" />
+    <Content Include="othersimages\B5.JPG" />
+    <Content Include="othersimages\B6.JPG" />
+    <Content Include="othersimages\B8.JPG" />
+    <Content Include="othersimages\B9.JPG" />
+    <Content Include="othersimages\C1.JPG" />
+    <Content Include="othersimages\C2.JPG" />
+    <Content Include="othersimages\C3.JPG" />
+    <Content Include="othersimages\C4.JPG" />
+    <Content Include="othersimages\C5.JPG" />
+    <Content Include="othersimages\C6.JPG" />
+    <Content Include="othersimages\C7.JPG" />
+    <Content Include="othersimages\C8.JPG" />
+    <Content Include="othersimages\C9.JPG" />
+    <Content Include="othersimages\D1.JPG" />
+    <Content Include="othersimages\D2.JPG" />
+    <Content Include="othersimages\D3.JPG" />
+    <Content Include="othersimages\D4.JPG" />
+    <Content Include="othersimages\D5.JPG" />
+    <Content Include="othersimages\D6.JPG" />
+    <Content Include="othersimages\D7.JPG" />
+    <Content Include="othersimages\D8.JPG" />
+    <Content Include="othersimages\D9.JPG" />
+    <Content Include="othersimages\E1.JPG" />
+    <Content Include="othersimages\larger\B2.JPG" />
+    <Content Include="othersimages\larger\B3.jpg" />
+    <Content Include="othersimages\larger\B4.JPG" />
+    <Content Include="othersimages\larger\B5.JPG" />
+    <Content Include="othersimages\larger\B6.JPG" />
+    <Content Include="othersimages\larger\B8.JPG" />
+    <Content Include="othersimages\larger\B9.JPG" />
+    <Content Include="othersimages\larger\C1.JPG" />
+    <Content Include="othersimages\larger\C2.JPG" />
+    <Content Include="othersimages\larger\C3.JPG" />
+    <Content Include="othersimages\larger\C4.JPG" />
+    <Content Include="othersimages\larger\C5.JPG" />
+    <Content Include="othersimages\larger\C6.JPG" />
+    <Content Include="othersimages\larger\C7.JPG" />
+    <Content Include="othersimages\larger\C8.JPG" />
+    <Content Include="othersimages\larger\C9.JPG" />
+    <Content Include="othersimages\larger\D1.JPG" />
+    <Content Include="othersimages\larger\D2.JPG" />
+    <Content Include="othersimages\larger\D3.JPG" />
+    <Content Include="othersimages\larger\D4.JPG" />
+    <Content Include="othersimages\larger\D5.JPG" />
+    <Content Include="othersimages\larger\D6.JPG" />
+    <Content Include="othersimages\larger\D7.JPG" />
+    <Content Include="othersimages\larger\D8.JPG" />
+    <Content Include="othersimages\larger\D9.JPG" />
+    <Content Include="othersimages\larger\E1.JPG" />
+    <Content Include="othersimages\smaller\B2.JPG" />
+    <Content Include="othersimages\smaller\B3.jpg" />
+    <Content Include="othersimages\smaller\B4.JPG" />
+    <Content Include="othersimages\smaller\B5.JPG" />
+    <Content Include="othersimages\smaller\B6.JPG" />
+    <Content Include="othersimages\smaller\B8.JPG" />
+    <Content Include="othersimages\smaller\B9.JPG" />
+    <Content Include="othersimages\smaller\C1.JPG" />
+    <Content Include="othersimages\smaller\C2.JPG" />
+    <Content Include="othersimages\smaller\C3.JPG" />
+    <Content Include="othersimages\smaller\C4.JPG" />
+    <Content Include="othersimages\smaller\C5.JPG" />
+    <Content Include="othersimages\smaller\C6.JPG" />
+    <Content Include="othersimages\smaller\C7.JPG" />
+    <Content Include="othersimages\smaller\C8.JPG" />
+    <Content Include="othersimages\smaller\C9.JPG" />
+    <Content Include="othersimages\smaller\D1.JPG" />
+    <Content Include="othersimages\smaller\D2.JPG" />
+    <Content Include="othersimages\smaller\D3.JPG" />
+    <Content Include="othersimages\smaller\D4.JPG" />
+    <Content Include="othersimages\smaller\D5.JPG" />
+    <Content Include="othersimages\smaller\D6.JPG" />
+    <Content Include="othersimages\smaller\D7.JPG" />
+    <Content Include="othersimages\smaller\D8.JPG" />
+    <Content Include="othersimages\smaller\D9.JPG" />
+    <Content Include="othersimages\smaller\E1.JPG" />
+    <Content Include="procesogallery.aspx" />
+    <Content Include="nosotros.aspx" />
+    <Content Include="nosotrosgallery.aspx" />
+    <Content Include="madera.aspx" />
+    <Content Include="maderagallery.aspx" />
+    <Content Include="garantia.aspx" />
+    <Content Include="images\web_08_complete.jpg" />
+    <Content Include="procesoinfo.aspx" />
+    <Content Include="proceso.aspx" />
+    <Content Include="images\bookmarkfavicon.png" />
+    <Content Include="images\web_08_en.jpg" />
+    <Content Include="images\web_10_en.jpg" />
+    <Content Include="images\web_10_larger_en.jpg" />
+    <Content Include="productionfacilityimages\A4.JPG" />
+    <Content Include="productionfacilityimages\A5.JPG" />
+    <Content Include="productionfacilityimages\A6.JPG" />
+    <Content Include="productionfacilityimages\A7.JPG" />
+    <Content Include="productionfacilityimages\A8.jpg" />
+    <Content Include="productionfacilityimages\A9.jpg" />
+    <Content Include="productionfacilityimages\B1.JPG" />
+    <Content Include="productionfacilityimages\B2.JPG" />
+    <Content Include="productionfacilityimages\B3.JPG" />
+    <Content Include="productionfacilityimages\B4.JPG" />
+    <Content Include="productionfacilityimages\B5.JPG" />
+    <Content Include="productionfacilityimages\B6.JPG" />
+    <Content Include="productionfacilityimages\B7.JPG" />
+    <Content Include="productionfacilityimages\B8.jpg" />
+    <Content Include="productionfacilityimages\B9.JPG" />
+    <Content Include="productionfacilityimages\C1.JPG" />
+    <Content Include="productionfacilityimages\larger\A4.JPG" />
+    <Content Include="productionfacilityimages\larger\A5.JPG" />
+    <Content Include="productionfacilityimages\larger\A6.JPG" />
+    <Content Include="productionfacilityimages\larger\A7.JPG" />
+    <Content Include="productionfacilityimages\larger\A8.jpg" />
+    <Content Include="productionfacilityimages\larger\A9.jpg" />
+    <Content Include="productionfacilityimages\larger\B1.JPG" />
+    <Content Include="productionfacilityimages\larger\B2.JPG" />
+    <Content Include="productionfacilityimages\larger\B3.JPG" />
+    <Content Include="productionfacilityimages\larger\B4.JPG" />
+    <Content Include="productionfacilityimages\larger\B5.JPG" />
+    <Content Include="productionfacilityimages\larger\B6.JPG" />
+    <Content Include="productionfacilityimages\larger\B7.JPG" />
+    <Content Include="productionfacilityimages\larger\B8.jpg" />
+    <Content Include="productionfacilityimages\larger\B9.JPG" />
+    <Content Include="productionfacilityimages\larger\C1.JPG" />
+    <Content Include="productionfacilityimages\smaller\A1.jpg" />
+    <Content Include="productionfacilityimages\smaller\A2.jpg" />
+    <Content Include="productionfacilityimages\smaller\A3.jpg" />
+    <Content Include="productionfacilityimages\smaller\A4.JPG" />
+    <Content Include="productionfacilityimages\smaller\A5.JPG" />
+    <Content Include="productionfacilityimages\smaller\A6.JPG" />
+    <Content Include="productionfacilityimages\smaller\A7.JPG" />
+    <Content Include="productionfacilityimages\smaller\A8.jpg" />
+    <Content Include="productionfacilityimages\smaller\A9.jpg" />
+    <Content Include="productionfacilityimages\smaller\B1.JPG" />
+    <Content Include="productionfacilityimages\smaller\B2.JPG" />
+    <Content Include="productionfacilityimages\smaller\B3.JPG" />
+    <Content Include="productionfacilityimages\smaller\B4.JPG" />
+    <Content Include="productionfacilityimages\smaller\B5.JPG" />
+    <Content Include="productionfacilityimages\smaller\B6.JPG" />
+    <Content Include="productionfacilityimages\smaller\B7.JPG" />
+    <Content Include="productionfacilityimages\smaller\B8.jpg" />
+    <Content Include="productionfacilityimages\smaller\B9.JPG" />
+    <Content Include="productionfacilityimages\smaller\C1.JPG" />
+    <Content Include="robots.txt" />
+    <Content Include="roofsimages\C1.JPG" />
+    <Content Include="roofsimages\C2.JPG" />
+    <Content Include="roofsimages\C3.JPG" />
+    <Content Include="roofsimages\C4.JPG" />
+    <Content Include="roofsimages\C5.JPG" />
+    <Content Include="roofsimages\C6.JPG" />
+    <Content Include="roofsimages\C7.JPG" />
+    <Content Include="roofsimages\C8.JPG" />
+    <Content Include="roofsimages\C9.JPG" />
+    <Content Include="roofsimages\D1.JPG" />
+    <Content Include="roofsimages\D2.JPG" />
+    <Content Include="roofsimages\D3.JPG" />
+    <Content Include="roofsimages\D4.JPG" />
+    <Content Include="roofsimages\D5.JPG" />
+    <Content Include="roofsimages\D6.JPG" />
+    <Content Include="roofsimages\D7.JPG" />
+    <Content Include="roofsimages\D8.JPG" />
+    <Content Include="roofsimages\D9.JPG" />
+    <Content Include="roofsimages\E1.JPG" />
+    <Content Include="roofsimages\E2.JPG" />
+    <Content Include="roofsimages\larger\C1.JPG" />
+    <Content Include="roofsimages\larger\C2.JPG" />
+    <Content Include="roofsimages\larger\C3.JPG" />
+    <Content Include="roofsimages\larger\C4.JPG" />
+    <Content Include="roofsimages\larger\C5.JPG" />
+    <Content Include="roofsimages\larger\C6.JPG" />
+    <Content Include="roofsimages\larger\C7.JPG" />
+    <Content Include="roofsimages\larger\C8.JPG" />
+    <Content Include="roofsimages\larger\C9.JPG" />
+    <Content Include="roofsimages\larger\D1.JPG" />
+    <Content Include="roofsimages\larger\D2.JPG" />
+    <Content Include="roofsimages\larger\D3.JPG" />
+    <Content Include="roofsimages\larger\D4.JPG" />
+    <Content Include="roofsimages\larger\D5.JPG" />
+    <Content Include="roofsimages\larger\D6.JPG" />
+    <Content Include="roofsimages\larger\D7.JPG" />
+    <Content Include="roofsimages\larger\D8.JPG" />
+    <Content Include="roofsimages\larger\D9.JPG" />
+    <Content Include="roofsimages\larger\E1.JPG" />
+    <Content Include="roofsimages\larger\E2.JPG" />
+    <Content Include="roofsimages\smaller\A1.jpg" />
+    <Content Include="roofsimages\smaller\A2.jpg" />
+    <Content Include="roofsimages\smaller\A3.jpg" />
+    <Content Include="roofsimages\smaller\A4.jpg" />
+    <Content Include="roofsimages\smaller\A5.JPG" />
+    <Content Include="roofsimages\smaller\A6.jpg" />
+    <Content Include="roofsimages\smaller\A7.jpg" />
+    <Content Include="roofsimages\smaller\A8.JPG" />
+    <Content Include="roofsimages\smaller\A9.jpg" />
+    <Content Include="roofsimages\smaller\B1.jpg" />
+    <Content Include="roofsimages\smaller\B2.jpg" />
+    <Content Include="roofsimages\smaller\B3.JPG" />
+    <Content Include="roofsimages\smaller\B4.jpg" />
+    <Content Include="roofsimages\smaller\B5.JPG" />
+    <Content Include="roofsimages\smaller\B6.jpg" />
+    <Content Include="roofsimages\smaller\B7.jpg" />
+    <Content Include="roofsimages\smaller\B8.JPG" />
+    <Content Include="roofsimages\smaller\B9.jpg" />
+    <Content Include="otros.aspx" />
+    <Content Include="otrosgallery.aspx" />
+    <Content Include="roofsimages\smaller\C1.JPG" />
+    <Content Include="roofsimages\smaller\C2.JPG" />
+    <Content Include="roofsimages\smaller\C3.JPG" />
+    <Content Include="roofsimages\smaller\C4.JPG" />
+    <Content Include="roofsimages\smaller\C5.JPG" />
+    <Content Include="roofsimages\smaller\C6.JPG" />
+    <Content Include="roofsimages\smaller\C7.JPG" />
+    <Content Include="roofsimages\smaller\C8.JPG" />
+    <Content Include="roofsimages\smaller\C9.JPG" />
+    <Content Include="roofsimages\smaller\D1.JPG" />
+    <Content Include="roofsimages\smaller\D2.JPG" />
+    <Content Include="roofsimages\smaller\D3.JPG" />
+    <Content Include="roofsimages\smaller\D4.JPG" />
+    <Content Include="roofsimages\smaller\D5.JPG" />
+    <Content Include="roofsimages\smaller\D6.JPG" />
+    <Content Include="roofsimages\smaller\D7.JPG" />
+    <Content Include="roofsimages\smaller\D8.JPG" />
+    <Content Include="roofsimages\smaller\D9.JPG" />
+    <Content Include="roofsimages\smaller\E1.JPG" />
+    <Content Include="roofsimages\smaller\E2.JPG" />
+    <Content Include="techos.aspx" />
+    <Content Include="techosgallery.aspx" />
+    <Content Include="interiores.aspx" />
+    <Content Include="interioresgallery.aspx" />
+    <Content Include="housesextimages\A1.jpg" />
+    <Content Include="housesextimages\A2.JPG" />
+    <Content Include="housesextimages\A3.jpg" />
+    <Content Include="housesextimages\A4.JPG" />
+    <Content Include="housesextimages\A5.JPG" />
+    <Content Include="housesextimages\A6.jpg" />
+    <Content Include="housesextimages\A7.jpg" />
+    <Content Include="housesextimages\A8.jpg" />
+    <Content Include="housesextimages\A9.jpg" />
+    <Content Include="housesextimages\B1.jpg" />
+    <Content Include="housesextimages\B2.jpg" />
+    <Content Include="housesextimages\B3.jpg" />
+    <Content Include="housesextimages\B4.jpg" />
+    <Content Include="housesextimages\B5.jpg" />
+    <Content Include="housesextimages\B6.jpg" />
+    <Content Include="housesextimages\B7.JPG" />
+    <Content Include="housesextimages\B8.jpg" />
+    <Content Include="housesextimages\B9.jpg" />
+    <Content Include="housesextimages\C1.JPG" />
+    <Content Include="housesextimages\C2.JPG" />
+    <Content Include="housesextimages\C3.jpg" />
+    <Content Include="housesextimages\C4.jpg" />
+    <Content Include="housesextimages\C5.jpg" />
+    <Content Include="housesextimages\C6.jpg" />
+    <Content Include="housesextimages\C7.JPG" />
+    <Content Include="housesextimages\C8.JPG" />
+    <Content Include="housesextimages\C9.JPG" />
+    <Content Include="housesextimages\D1.JPG" />
+    <Content Include="housesextimages\D2.jpg" />
+    <Content Include="housesextimages\D3.jpg" />
+    <Content Include="housesextimages\D4.JPG" />
+    <Content Include="housesextimages\D5.JPG" />
+    <Content Include="housesextimages\D6.jpg" />
+    <Content Include="housesextimages\D7.jpg" />
+    <Content Include="housesextimages\D8.jpg" />
+    <Content Include="housesextimages\D9.JPG" />
+    <Content Include="housesextimages\E1.jpg" />
+    <Content Include="housesextimages\E2.jpg" />
+    <Content Include="housesextimages\E3.JPG" />
+    <Content Include="housesextimages\E4.jpg" />
+    <Content Include="housesextimages\E5.jpg" />
+    <Content Include="housesextimages\E6.JPG" />
+    <Content Include="housesextimages\E7.jpg" />
+    <Content Include="housesextimages\E8.jpg" />
+    <Content Include="housesextimages\E9.jpg" />
+    <Content Include="housesextimages\F1.jpg" />
+    <Content Include="housesextimages\larger\A1.jpg" />
+    <Content Include="housesextimages\larger\A2.JPG" />
+    <Content Include="housesextimages\larger\A3.jpg" />
+    <Content Include="housesextimages\larger\A4.JPG" />
+    <Content Include="housesextimages\larger\A5.jpg" />
+    <Content Include="housesextimages\larger\A6.jpg" />
+    <Content Include="housesextimages\larger\A7.jpg" />
+    <Content Include="housesextimages\larger\A8.jpg" />
+    <Content Include="housesextimages\larger\A9.jpg" />
+    <Content Include="housesextimages\larger\B1.jpg" />
+    <Content Include="housesextimages\larger\B2.jpg" />
+    <Content Include="housesextimages\larger\B3.jpg" />
+    <Content Include="housesextimages\larger\B4.jpg" />
+    <Content Include="housesextimages\larger\B5.jpg" />
+    <Content Include="housesextimages\larger\B6.jpg" />
+    <Content Include="housesextimages\larger\B7.JPG" />
+    <Content Include="housesextimages\larger\B8.jpg" />
+    <Content Include="housesextimages\larger\B9.jpg" />
+    <Content Include="housesextimages\larger\C1.JPG" />
+    <Content Include="housesextimages\larger\C2.jpg" />
+    <Content Include="housesextimages\larger\C3.jpg" />
+    <Content Include="housesextimages\larger\C4.jpg" />
+    <Content Include="housesextimages\larger\C5.jpg" />
+    <Content Include="housesextimages\larger\C6.jpg" />
+    <Content Include="housesextimages\larger\C7.JPG" />
+    <Content Include="housesextimages\larger\C8.JPG" />
+    <Content Include="housesextimages\larger\C9.JPG" />
+    <Content Include="housesextimages\larger\D1.JPG" />
+    <Content Include="housesextimages\larger\D2.jpg" />
+    <Content Include="housesextimages\larger\D3.jpg" />
+    <Content Include="housesextimages\larger\D4.JPG" />
+    <Content Include="housesextimages\larger\D5.JPG" />
+    <Content Include="housesextimages\larger\D6.jpg" />
+    <Content Include="housesextimages\larger\D7.jpg" />
+    <Content Include="housesextimages\larger\D8.jpg" />
+    <Content Include="housesextimages\larger\D9.JPG" />
+    <Content Include="housesextimages\larger\E1.jpg" />
+    <Content Include="housesextimages\larger\E2.jpg" />
+    <Content Include="housesextimages\larger\E3.JPG" />
+    <Content Include="housesextimages\larger\E4.JPG" />
+    <Content Include="housesextimages\larger\E5.jpg" />
+    <Content Include="housesextimages\larger\E6.JPG" />
+    <Content Include="housesextimages\larger\E7.jpg" />
+    <Content Include="housesextimages\larger\E8.jpg" />
+    <Content Include="housesextimages\larger\E9.jpg" />
+    <Content Include="housesextimages\larger\F1.jpg" />
+    <Content Include="housesintimages\A1.jpg" />
+    <Content Include="housesintimages\A2.jpg" />
+    <Content Include="housesintimages\A3.jpg" />
+    <Content Include="housesintimages\A4.jpg" />
+    <Content Include="housesintimages\A5.jpg" />
+    <Content Include="housesintimages\A6.jpg" />
+    <Content Include="housesintimages\A7.jpg" />
+    <Content Include="housesintimages\A8.jpg" />
+    <Content Include="housesintimages\A9.JPG" />
+    <Content Include="housesintimages\B1.JPG" />
+    <Content Include="housesintimages\B2.jpg" />
+    <Content Include="housesintimages\larger\A1.jpg" />
+    <Content Include="housesintimages\larger\A4.jpg" />
+    <Content Include="housesintimages\larger\A5.jpg" />
+    <Content Include="housesintimages\larger\A6.jpg" />
+    <Content Include="housesintimages\larger\A7.jpg" />
+    <Content Include="housesintimages\larger\A9.JPG" />
+    <Content Include="housesintimages\larger\B1.JPG" />
+    <Content Include="housesintimages\larger\B2.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\checkmark.png" />
+    <Content Include="images\chrome13x13.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\firefox13x13.png" />
+    <Content Include="images\ie613x13.png" />
+    <Content Include="images\ie813x13.png" />
+    <Content Include="images\iPhone13x13.png" />
+    <Content Include="images\littleCalendar.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\noaccess.jpg" />
+    <Content Include="images\noRight.swf" />
+    <Content Include="images\noRightBits.gif" />
+    <Content Include="images\option.png" />
+    <Content Include="images\pixelMistyRose.png" />
+    <Content Include="images\redPixel.png" />
+    <Content Include="images\safari13x13.png" />
+    <Content Include="images\selectedoption.png" />
+    <Content Include="images\web_07.jpg" />
+    <Content Include="images\web_08.jpg" />
+    <Content Include="images\web_09.jpg" />
+    <Content Include="images\web_10.jpg" />
+    <Content Include="images\web_10_larger.jpg" />
+    <Content Include="images\web_11.jpg" />
+    <Content Include="images\web_12.jpg" />
+    <Content Include="images\web_13.jpg" />
+    <Content Include="images\web_14.jpg" />
+    <Content Include="images\whitePixel.png" />
+    <Content Include="images\whiteTransPixel.png" />
+    <Content Include="images\yellowPixel.png" />
+    <Content Include="othersimages\A1.JPG" />
+    <Content Include="othersimages\A2.jpg" />
+    <Content Include="othersimages\A3.JPG" />
+    <Content Include="othersimages\A4.JPG" />
+    <Content Include="othersimages\A5.jpg" />
+    <Content Include="othersimages\A6.JPG" />
+    <Content Include="othersimages\A7.JPG" />
+    <Content Include="othersimages\A8.JPG" />
+    <Content Include="othersimages\A9.jpg" />
+    <Content Include="othersimages\B1.jpg" />
+    <Content Include="othersimages\larger\A1.JPG" />
+    <Content Include="othersimages\larger\A2.jpg" />
+    <Content Include="othersimages\larger\A3.JPG" />
+    <Content Include="othersimages\larger\A4.JPG" />
+    <Content Include="othersimages\larger\A5.jpg" />
+    <Content Include="othersimages\larger\A6.JPG" />
+    <Content Include="othersimages\larger\A7.JPG" />
+    <Content Include="othersimages\larger\A8.JPG" />
+    <Content Include="othersimages\larger\A9.jpg" />
+    <Content Include="othersimages\larger\B1.jpg" />
+    <Content Include="othersimages\smaller\A1.JPG" />
+    <Content Include="othersimages\smaller\A2.jpg" />
+    <Content Include="othersimages\smaller\A3.JPG" />
+    <Content Include="othersimages\smaller\A4.JPG" />
+    <Content Include="othersimages\smaller\A5.jpg" />
+    <Content Include="othersimages\smaller\A6.JPG" />
+    <Content Include="othersimages\smaller\A7.JPG" />
+    <Content Include="othersimages\smaller\A8.JPG" />
+    <Content Include="othersimages\smaller\A9.jpg" />
+    <Content Include="othersimages\smaller\B1.jpg" />
+    <Content Include="processimages\A1.jpg" />
+    <Content Include="processimages\A2.jpg" />
+    <Content Include="processimages\A3.jpg" />
+    <Content Include="processimages\A4.jpg" />
+    <Content Include="processimages\A5.jpg" />
+    <Content Include="processimages\A6.jpg" />
+    <Content Include="processimages\A7.jpg" />
+    <Content Include="processimages\A8.jpg" />
+    <Content Include="processimages\A9.jpg" />
+    <Content Include="processimages\B1.jpg" />
+    <Content Include="processimages\B2.jpg" />
+    <Content Include="processimages\B3.jpg" />
+    <Content Include="processimages\B4.jpg" />
+    <Content Include="processimages\B5.jpg" />
+    <Content Include="processimages\B6.jpg" />
+    <Content Include="processimages\B7.jpg" />
+    <Content Include="processimages\B8.jpg" />
+    <Content Include="processimages\B9.jpg" />
+    <Content Include="processimages\C1.jpg" />
+    <Content Include="processimages\C2.jpg" />
+    <Content Include="processimages\C3.jpg" />
+    <Content Include="processimages\C4.jpg" />
+    <Content Include="processimages\C5.jpg" />
+    <Content Include="processimages\C6.jpg" />
+    <Content Include="processimages\C7.jpg" />
+    <Content Include="processimages\C8.jpg" />
+    <Content Include="processimages\C9.jpg" />
+    <Content Include="processimages\D1.jpg" />
+    <Content Include="processimages\D2.jpg" />
+    <Content Include="processimages\D3.jpg" />
+    <Content Include="processimages\D4.jpg" />
+    <Content Include="processimages\D5.jpg" />
+    <Content Include="processimages\D6.jpg" />
+    <Content Include="processimages\D7.jpg" />
+    <Content Include="processimages\D8.jpg" />
+    <Content Include="processimages\larger\A1.jpg" />
+    <Content Include="processimages\larger\A2.jpg" />
+    <Content Include="processimages\larger\A3.jpg" />
+    <Content Include="processimages\larger\A4.jpg" />
+    <Content Include="processimages\larger\A5.jpg" />
+    <Content Include="processimages\larger\A6.jpg" />
+    <Content Include="processimages\larger\A7.jpg" />
+    <Content Include="processimages\larger\A8.jpg" />
+    <Content Include="processimages\larger\A9.jpg" />
+    <Content Include="processimages\larger\B1.jpg" />
+    <Content Include="processimages\larger\B2.jpg" />
+    <Content Include="processimages\larger\B3.jpg" />
+    <Content Include="processimages\larger\B4.jpg" />
+    <Content Include="processimages\larger\B5.jpg" />
+    <Content Include="processimages\larger\B6.jpg" />
+    <Content Include="processimages\larger\B7.jpg" />
+    <Content Include="processimages\larger\B8.jpg" />
+    <Content Include="processimages\larger\B9.jpg" />
+    <Content Include="processimages\larger\C1.jpg" />
+    <Content Include="processimages\larger\C2.jpg" />
+    <Content Include="processimages\larger\C3.jpg" />
+    <Content Include="processimages\larger\C4.jpg" />
+    <Content Include="processimages\larger\C5.jpg" />
+    <Content Include="processimages\larger\C6.jpg" />
+    <Content Include="processimages\larger\C7.jpg" />
+    <Content Include="processimages\larger\C8.jpg" />
+    <Content Include="processimages\larger\C9.jpg" />
+    <Content Include="processimages\larger\D1.jpg" />
+    <Content Include="processimages\larger\D2.jpg" />
+    <Content Include="processimages\larger\D3.jpg" />
+    <Content Include="processimages\larger\D4.jpg" />
+    <Content Include="processimages\larger\D5.jpg" />
+    <Content Include="processimages\larger\D6.jpg" />
+    <Content Include="processimages\larger\D7.jpg" />
+    <Content Include="processimages\larger\D8.jpg" />
+    <Content Include="processimages\smaller\A1.jpg" />
+    <Content Include="processimages\smaller\A2.jpg" />
+    <Content Include="processimages\smaller\A3.jpg" />
+    <Content Include="processimages\smaller\A4.jpg" />
+    <Content Include="processimages\smaller\A5.jpg" />
+    <Content Include="processimages\smaller\A6.jpg" />
+    <Content Include="processimages\smaller\A7.jpg" />
+    <Content Include="processimages\smaller\A8.jpg" />
+    <Content Include="processimages\smaller\A9.jpg" />
+    <Content Include="processimages\smaller\B1.jpg" />
+    <Content Include="processimages\smaller\B2.jpg" />
+    <Content Include="processimages\smaller\B3.jpg" />
+    <Content Include="processimages\smaller\B4.jpg" />
+    <Content Include="processimages\smaller\B5.jpg" />
+    <Content Include="processimages\smaller\B6.jpg" />
+    <Content Include="processimages\smaller\B7.jpg" />
+    <Content Include="processimages\smaller\B8.jpg" />
+    <Content Include="processimages\smaller\B9.jpg" />
+    <Content Include="processimages\smaller\C1.jpg" />
+    <Content Include="processimages\smaller\C2.jpg" />
+    <Content Include="processimages\smaller\C3.jpg" />
+    <Content Include="processimages\smaller\C4.jpg" />
+    <Content Include="processimages\smaller\C5.jpg" />
+    <Content Include="processimages\smaller\C6.jpg" />
+    <Content Include="processimages\smaller\C7.jpg" />
+    <Content Include="processimages\smaller\C8.jpg" />
+    <Content Include="processimages\smaller\C9.jpg" />
+    <Content Include="processimages\smaller\D1.jpg" />
+    <Content Include="processimages\smaller\D2.jpg" />
+    <Content Include="processimages\smaller\D3.jpg" />
+    <Content Include="processimages\smaller\D4.jpg" />
+    <Content Include="processimages\smaller\D5.jpg" />
+    <Content Include="processimages\smaller\D6.jpg" />
+    <Content Include="processimages\smaller\D7.jpg" />
+    <Content Include="processimages\smaller\D8.jpg" />
+    <Content Include="productionfacilityimages\A1.jpg" />
+    <Content Include="productionfacilityimages\A2.jpg" />
+    <Content Include="productionfacilityimages\A3.jpg" />
+    <Content Include="productionfacilityimages\larger\A1.jpg" />
+    <Content Include="productionfacilityimages\larger\A2.jpg" />
+    <Content Include="productionfacilityimages\larger\A3.jpg" />
+    <Content Include="roofsimages\A1.jpg" />
+    <Content Include="roofsimages\A2.jpg" />
+    <Content Include="roofsimages\A3.jpg" />
+    <Content Include="roofsimages\A4.jpg" />
+    <Content Include="roofsimages\A5.JPG" />
+    <Content Include="roofsimages\A6.JPG" />
+    <Content Include="roofsimages\A7.jpg" />
+    <Content Include="roofsimages\A8.jpg" />
+    <Content Include="roofsimages\A9.jpg" />
+    <Content Include="roofsimages\B1.jpg" />
+    <Content Include="roofsimages\B2.JPG" />
+    <Content Include="roofsimages\B3.JPG" />
+    <Content Include="roofsimages\B4.JPG" />
+    <Content Include="roofsimages\B5.JPG" />
+    <Content Include="roofsimages\B6.jpg" />
+    <Content Include="roofsimages\B7.jpg" />
+    <Content Include="roofsimages\B8.jpg" />
+    <Content Include="roofsimages\B9.JPG" />
+    <Content Include="roofsimages\larger\A1.jpg" />
+    <Content Include="roofsimages\larger\A2.jpg" />
+    <Content Include="roofsimages\larger\A3.jpg" />
+    <Content Include="roofsimages\larger\A4.jpg" />
+    <Content Include="roofsimages\larger\A5.JPG" />
+    <Content Include="roofsimages\larger\A6.JPG" />
+    <Content Include="roofsimages\larger\A7.jpg" />
+    <Content Include="roofsimages\larger\A8.jpg" />
+    <Content Include="roofsimages\larger\A9.jpg" />
+    <Content Include="roofsimages\larger\B1.jpg" />
+    <Content Include="roofsimages\larger\B2.JPG" />
+    <Content Include="roofsimages\larger\B3.JPG" />
+    <Content Include="roofsimages\larger\B4.JPG" />
+    <Content Include="roofsimages\larger\B5.JPG" />
+    <Content Include="roofsimages\larger\B6.jpg" />
+    <Content Include="roofsimages\larger\B7.jpg" />
+    <Content Include="roofsimages\larger\B8.jpg" />
+    <Content Include="roofsimages\larger\B9.jpg" />
+    <Content Include="styles.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="woodsimages\A1.jpg" />
+    <Content Include="woodsimages\A2.jpg" />
+    <Content Include="woodsimages\A3.jpg" />
+    <Content Include="woodsimages\A4.jpg" />
+    <Content Include="woodsimages\A5.jpg" />
+    <Content Include="woodsimages\larger\A1.jpg" />
+    <Content Include="woodsimages\larger\A2.jpg" />
+    <Content Include="woodsimages\larger\A3.jpg" />
+    <Content Include="woodsimages\larger\A4.jpg" />
+    <Content Include="woodsimages\larger\A5.jpg" />
+    <Content Include="woodsimages\smaller\A1.JPG" />
+    <Content Include="woodsimages\smaller\A2.JPG" />
+    <Content Include="woodsimages\smaller\A3.JPG" />
+    <Content Include="woodsimages\smaller\A4.JPG" />
+    <Content Include="woodsimages\smaller\A5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminFotos.aspx.designer.vb">
+      <DependentUpon>adminFotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminFotos.aspx.vb">
+      <DependentUpon>adminFotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indexgallery.aspx.designer.vb">
+      <DependentUpon>indexgallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="indexgallery.aspx.vb">
+      <DependentUpon>indexgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aserradero.aspx.designer.vb">
+      <DependentUpon>aserradero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aserradero.aspx.vb">
+      <DependentUpon>aserradero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aserraderogallery.aspx.designer.vb">
+      <DependentUpon>aserraderogallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aserraderogallery.aspx.vb">
+      <DependentUpon>aserraderogallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inversionistas.aspx.designer.vb">
+      <DependentUpon>inversionistas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inversionistas.aspx.vb">
+      <DependentUpon>inversionistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="procesogallery.aspx.designer.vb">
+      <DependentUpon>procesogallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="procesogallery.aspx.vb">
+      <DependentUpon>procesogallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nosotros.aspx.designer.vb">
+      <DependentUpon>nosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nosotros.aspx.vb">
+      <DependentUpon>nosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nosotrosgallery.aspx.designer.vb">
+      <DependentUpon>nosotrosgallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nosotrosgallery.aspx.vb">
+      <DependentUpon>nosotrosgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="madera.aspx.designer.vb">
+      <DependentUpon>madera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="madera.aspx.vb">
+      <DependentUpon>madera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maderagallery.aspx.designer.vb">
+      <DependentUpon>maderagallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maderagallery.aspx.vb">
+      <DependentUpon>maderagallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="garantia.aspx.designer.vb">
+      <DependentUpon>garantia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="garantia.aspx.vb">
+      <DependentUpon>garantia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="procesoinfo.aspx.designer.vb">
+      <DependentUpon>procesoinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="procesoinfo.aspx.vb">
+      <DependentUpon>procesoinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="proceso.aspx.designer.vb">
+      <DependentUpon>proceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="proceso.aspx.vb">
+      <DependentUpon>proceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otros.aspx.designer.vb">
+      <DependentUpon>otros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otros.aspx.vb">
+      <DependentUpon>otros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otrosgallery.aspx.designer.vb">
+      <DependentUpon>otrosgallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="otrosgallery.aspx.vb">
+      <DependentUpon>otrosgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="techos.aspx.designer.vb">
+      <DependentUpon>techos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="techos.aspx.vb">
+      <DependentUpon>techos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="techosgallery.aspx.designer.vb">
+      <DependentUpon>techosgallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="techosgallery.aspx.vb">
+      <DependentUpon>techosgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interiores.aspx.designer.vb">
+      <DependentUpon>interiores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="interiores.aspx.vb">
+      <DependentUpon>interiores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interioresgallery.aspx.designer.vb">
+      <DependentUpon>interioresgallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="interioresgallery.aspx.vb">
+      <DependentUpon>interioresgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utilities.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="catalogo.pdf" />
+    <None Include="faq.doc" />
+    <None Include="garantia.doc" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Profile1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="proceso.pptx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\ar\" />
+    <Folder Include="bin\cs\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\es\" />
+    <Folder Include="bin\fr\" />
+    <Folder Include="bin\he\" />
+    <Folder Include="bin\hi\" />
+    <Folder Include="bin\it\" />
+    <Folder Include="bin\ja\" />
+    <Folder Include="bin\ko\" />
+    <Folder Include="bin\nl\" />
+    <Folder Include="bin\pt\" />
+    <Folder Include="bin\ru\" />
+    <Folder Include="bin\tr-TR\" />
+    <Folder Include="bin\zh-CHS\" />
+    <Folder Include="bin\zh-CHT\" />
+    <Folder Include="uploadtemp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55555</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
